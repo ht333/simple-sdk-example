@@ -11,5 +11,6 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>sdk-server</module>
+    <module>client-server</module>
   </modules>
 </project>
