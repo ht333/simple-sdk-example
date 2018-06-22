@@ -2,6 +2,8 @@ package com.liumapp.demo.sdk.client.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.liumapp.demo.sdk.client.db.backup.domain.Backup;
+import com.liumapp.demo.sdk.client.db.backup.service.BackUpService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,15 +19,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("backup")
 public class BackupController {
 
+    @Autowired
+    private BackUpService backUpService;
+
     @RequestMapping("/add")
     public String addItem (@RequestBody Backup backup) {
-        
-        return JSON.toJSONString("success");
+        backUpService.insert(backup);
+        return JSON.toJSONString(backup.getId());
     }
 
     @RequestMapping("/get")
-    public String getItem () {
-        return JSON.toJSONString("success");
+    public String getItem (@RequestBody Backup backup) {
+        backup = backUpService.selectByPrimaryKey(backup.getId());
+        return JSON.toJSONString(backup);
     }
 
 }

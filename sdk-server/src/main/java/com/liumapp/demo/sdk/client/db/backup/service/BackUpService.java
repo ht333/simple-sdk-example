@@ -13,4 +13,6 @@ public interface BackUpService {
 
     int insert (Backup backup);
 
+    Backup selectByPrimaryKey (Long id);
+
 }

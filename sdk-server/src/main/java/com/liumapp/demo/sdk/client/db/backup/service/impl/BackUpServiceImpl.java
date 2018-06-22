@@ -26,4 +26,9 @@ public class BackUpServiceImpl implements BackUpService {
         return backupMapper.insert(backup);
     }
 
+    @Override
+    public Backup selectByPrimaryKey(Long id) {
+        return backupMapper.selectByPrimaryKey(id);
+    }
+
 }
