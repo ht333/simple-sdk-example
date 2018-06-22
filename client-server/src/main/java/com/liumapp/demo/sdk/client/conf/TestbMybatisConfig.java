@@ -24,7 +24,7 @@ import javax.sql.DataSource;
 public class TestbMybatisConfig {
 
     @Bean(name = "testbSqlSessionFactory")
-    public SqlSessionFactory testaSqlSessionFactory(@Qualifier("secondDataSource") DataSource dataSource) throws Exception {
+    public SqlSessionFactory testaSqlSessionFactory(@Qualifier("tradeDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
         //添加XML目录

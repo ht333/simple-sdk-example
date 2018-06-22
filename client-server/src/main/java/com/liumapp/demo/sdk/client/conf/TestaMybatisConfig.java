@@ -26,7 +26,7 @@ public class TestaMybatisConfig {
 
     @Primary
     @Bean(name = "testaSqlSessionFactory")
-    public SqlSessionFactory testaSqlSessionFactory(@Qualifier("primaryDataSource") DataSource dataSource) throws Exception {
+    public SqlSessionFactory testaSqlSessionFactory(@Qualifier("userDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
         //添加XML目录

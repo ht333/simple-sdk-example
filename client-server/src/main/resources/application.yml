@@ -9,8 +9,8 @@ spring:
           db-type: mysql
           log-slow-sql: true
           slow-sql-millis: 2000
-      primary:
-        url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&autoReconnect=true
+      user:
+        url: jdbc:mysql://localhost:3306/user?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&autoReconnect=true
         username: root
         password: adminadmin
         driver-class-name: com.mysql.jdbc.Driver
@@ -24,8 +24,8 @@ spring:
         test-while-idle: true
         time-between-eviction-runs-millis: 5000
         min-evictable-idle-time-millis: 60000
-      second:
-        url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&autoReconnect=true
+      trade:
+        url: jdbc:mysql://localhost:3306/trade?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&autoReconnect=true
         username: root
         password: adminadmin
         driver-class-name: com.mysql.jdbc.Driver
