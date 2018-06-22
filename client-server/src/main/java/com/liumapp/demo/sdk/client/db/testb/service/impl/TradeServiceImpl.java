@@ -1,13 +1,13 @@
 package com.liumapp.demo.sdk.client.db.testb.service.impl;
 
-import com.liumapp.demo.druid.complex.api.entity.TradeDetail;
-import com.liumapp.demo.druid.complex.api.db.testa.domain.ShippingAddress;
-import com.liumapp.demo.druid.complex.api.db.testa.domain.User;
-import com.liumapp.demo.druid.complex.api.db.testb.domain.Trade;
-import com.liumapp.demo.druid.complex.api.db.testb.mapper.TradeMapper;
-import com.liumapp.demo.druid.complex.api.db.testa.service.ShippingAddressService;
-import com.liumapp.demo.druid.complex.api.db.testa.service.UserService;
-import com.liumapp.demo.druid.complex.api.db.testb.service.TradeService;
+import com.liumapp.demo.sdk.client.entity.TradeDetail;
+import com.liumapp.demo.sdk.client.db.testa.domain.ShippingAddress;
+import com.liumapp.demo.sdk.client.db.testa.domain.User;
+import com.liumapp.demo.sdk.client.db.testb.domain.Trade;
+import com.liumapp.demo.sdk.client.db.testb.mapper.TradeMapper;
+import com.liumapp.demo.sdk.client.db.testa.service.ShippingAddressService;
+import com.liumapp.demo.sdk.client.db.testa.service.UserService;
+import com.liumapp.demo.sdk.client.db.testb.service.TradeService;
 import com.liumapp.demo.sdk.client.entity.TradeDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

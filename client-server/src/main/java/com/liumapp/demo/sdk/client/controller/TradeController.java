@@ -1,8 +1,8 @@
 package com.liumapp.demo.sdk.client.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.liumapp.demo.druid.complex.api.db.testb.domain.Trade;
-import com.liumapp.demo.druid.complex.api.db.testb.service.TradeService;
+import com.liumapp.demo.sdk.client.db.testb.domain.Trade;
+import com.liumapp.demo.sdk.client.db.testb.service.TradeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

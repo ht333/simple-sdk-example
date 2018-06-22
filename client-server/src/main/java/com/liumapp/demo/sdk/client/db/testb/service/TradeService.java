@@ -1,7 +1,7 @@
 package com.liumapp.demo.sdk.client.db.testb.service;
 
-import com.liumapp.demo.druid.complex.api.entity.TradeDetail;
-import com.liumapp.demo.druid.complex.api.db.testb.domain.Trade;
+import com.liumapp.demo.sdk.client.entity.TradeDetail;
+import com.liumapp.demo.sdk.client.db.testb.domain.Trade;
 import com.liumapp.demo.sdk.client.db.testb.domain.Trade;
 import com.liumapp.demo.sdk.client.entity.TradeDetail;
 

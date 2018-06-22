@@ -1,8 +1,8 @@
 package com.liumapp.demo.sdk.client.db.testa.service.impl;
 
-import com.liumapp.demo.druid.complex.api.db.testa.domain.User;
-import com.liumapp.demo.druid.complex.api.db.testa.mapper.UserMapper;
-import com.liumapp.demo.druid.complex.api.db.testa.service.UserService;
+import com.liumapp.demo.sdk.client.db.testa.domain.User;
+import com.liumapp.demo.sdk.client.db.testa.mapper.UserMapper;
+import com.liumapp.demo.sdk.client.db.testa.service.UserService;
 import com.liumapp.demo.sdk.client.db.testa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package com.liumapp.demo.sdk.client.db.testa.mapper;
 
-import com.liumapp.demo.druid.complex.api.db.testa.domain.UserExample;
-import com.liumapp.demo.druid.complex.api.db.testa.domain.User;
+import com.liumapp.demo.sdk.client.db.testa.domain.UserExample;
+import com.liumapp.demo.sdk.client.db.testa.domain.User;
 
 import java.util.List;
 

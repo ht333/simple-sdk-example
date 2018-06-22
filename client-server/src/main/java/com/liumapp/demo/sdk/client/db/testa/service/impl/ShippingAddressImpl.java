@@ -1,9 +1,9 @@
 package com.liumapp.demo.sdk.client.db.testa.service.impl;
 
-import com.liumapp.demo.druid.complex.api.db.testa.domain.ShippingAddress;
-import com.liumapp.demo.druid.complex.api.db.testa.domain.ShippingAddressExample;
-import com.liumapp.demo.druid.complex.api.db.testa.mapper.ShippingAddressMapper;
-import com.liumapp.demo.druid.complex.api.db.testa.service.ShippingAddressService;
+import com.liumapp.demo.sdk.client.db.testa.domain.ShippingAddress;
+import com.liumapp.demo.sdk.client.db.testa.domain.ShippingAddressExample;
+import com.liumapp.demo.sdk.client.db.testa.mapper.ShippingAddressMapper;
+import com.liumapp.demo.sdk.client.db.testa.service.ShippingAddressService;
 import com.liumapp.demo.sdk.client.db.testa.service.ShippingAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

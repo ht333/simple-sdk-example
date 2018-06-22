@@ -1,6 +1,6 @@
 package com.liumapp.demo.sdk.client.db.testa.service;
 
-import com.liumapp.demo.druid.complex.api.db.testa.domain.User;
+import com.liumapp.demo.sdk.client.db.testa.domain.User;
 
 /**
  * @author liumapp

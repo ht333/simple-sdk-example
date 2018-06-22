@@ -1,8 +1,8 @@
 package com.liumapp.demo.sdk.client.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.liumapp.demo.druid.complex.api.db.testa.domain.ShippingAddress;
-import com.liumapp.demo.druid.complex.api.db.testa.service.ShippingAddressService;
+import com.liumapp.demo.sdk.client.db.testa.domain.ShippingAddress;
+import com.liumapp.demo.sdk.client.db.testa.service.ShippingAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

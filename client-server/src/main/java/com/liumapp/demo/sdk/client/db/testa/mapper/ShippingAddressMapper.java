@@ -1,7 +1,7 @@
 package com.liumapp.demo.sdk.client.db.testa.mapper;
 
-import com.liumapp.demo.druid.complex.api.db.testa.domain.ShippingAddressExample;
-import com.liumapp.demo.druid.complex.api.db.testa.domain.ShippingAddress;
+import com.liumapp.demo.sdk.client.db.testa.domain.ShippingAddressExample;
+import com.liumapp.demo.sdk.client.db.testa.domain.ShippingAddress;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Param;

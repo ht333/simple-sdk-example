@@ -1,7 +1,7 @@
 package com.liumapp.demo.sdk.client.db.testb.mapper;
 
-import com.liumapp.demo.druid.complex.api.db.testb.domain.Trade;
-import com.liumapp.demo.druid.complex.api.db.testb.domain.TradeExample;
+import com.liumapp.demo.sdk.client.db.testb.domain.Trade;
+import com.liumapp.demo.sdk.client.db.testb.domain.TradeExample;
 
 import java.util.List;
 

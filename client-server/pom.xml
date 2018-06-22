@@ -8,7 +8,7 @@
     <version>1.5.6.RELEASE</version>
   </parent>
 
-  <groupId>com.liumapp.sdk.client</groupId>
+  <groupId>com.liumapp.demo.sdk.client</groupId>
   <artifactId>client-server</artifactId>
   <version>v1.0.0</version>
   <packaging>jar</packaging>

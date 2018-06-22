@@ -1,8 +1,8 @@
 package com.liumapp.demo.sdk.client.entity;
 
-import com.liumapp.demo.druid.complex.api.db.testa.domain.ShippingAddress;
-import com.liumapp.demo.druid.complex.api.db.testa.domain.User;
-import com.liumapp.demo.druid.complex.api.db.testb.domain.Trade;
+import com.liumapp.demo.sdk.client.db.testa.domain.ShippingAddress;
+import com.liumapp.demo.sdk.client.db.testa.domain.User;
+import com.liumapp.demo.sdk.client.db.testb.domain.Trade;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
