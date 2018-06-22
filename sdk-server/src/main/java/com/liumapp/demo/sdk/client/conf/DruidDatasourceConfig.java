@@ -30,5 +30,4 @@ public class DruidDatasourceConfig {
         return DruidDataSourceBuilder.create().build();
     }
 
-
 }
