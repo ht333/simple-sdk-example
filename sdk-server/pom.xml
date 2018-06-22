@@ -92,8 +92,7 @@
         <configuration>
             <verbose>true</verbose>
             <overwrite>true</overwrite>
-            <!--<configurationFile>${project.basedir}/src/main/resources/generatorTest1.xml</configurationFile>-->
-            <configurationFile>${project.basedir}/src/main/resources/generatorTest2.xml</configurationFile>
+            <configurationFile>${project.basedir}/src/main/resources/generatorBackup.xml</configurationFile>
         </configuration>
       </plugin>
     </plugins>
