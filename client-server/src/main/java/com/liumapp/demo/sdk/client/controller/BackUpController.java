@@ -1,6 +1,9 @@
 package com.liumapp.demo.sdk.client.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.liumapp.demo.sdk.client.entity.TradeDetail;
+import com.liumapp.demo.sdk.core.SdKCore;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class BackUpController {
 
     @RequestMapping("/add")
-    public String addItem () {
+    public String addItem (@RequestBody TradeDetail tradeDetail) {
+        SdKCore sdKCore = new SdKCore();
+        
         return JSON.toJSONString("success");
     }
 
