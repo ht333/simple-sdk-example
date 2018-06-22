@@ -7,7 +7,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
@@ -15,24 +14,23 @@ import javax.sql.DataSource;
 
 /**
  * @author liumapp
- * @file TestaMybatisConfig.java
+ * @file TradeMybatisConfig.java
  * @email liumapp.com@gmail.com
  * @homepage http://www.liumapp.com
- * @date 6/19/18
+ * @date 6/22/18
  */
 @Configuration
-@MapperScan(basePackages = {"com.liumapp.demo.sdk.client.db.user.mapper"}, sqlSessionTemplateRef = "testaSqlSessionTemplate")
-public class TestaMybatisConfig {
+@MapperScan(basePackages = {"com.liumapp.demo.sdk.client.db.trade.mapper"}, sqlSessionTemplateRef = "tradeSqlSessionTemplate")
+public class TradeMybatisConfig {
 
-    @Primary
-    @Bean(name = "testaSqlSessionFactory")
-    public SqlSessionFactory testaSqlSessionFactory(@Qualifier("userDataSource") DataSource dataSource) throws Exception {
+    @Bean(name = "tradeSqlSessionFactory")
+    public SqlSessionFactory testaSqlSessionFactory(@Qualifier("tradeDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
         //添加XML目录
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            bean.setMapperLocations(resolver.getResources("classpath*:mappers1/*Mapper.xml"));
+            bean.setMapperLocations(resolver.getResources("classpath*:trade-mappers/*Mapper.xml"));
             return bean.getObject();
         } catch (Exception e) {
             e.printStackTrace();
@@ -40,8 +38,8 @@ public class TestaMybatisConfig {
         }
     }
 
-    @Bean(name = "testaSqlSessionTemplate")
-    public SqlSessionTemplate testaSqlSessionTemplate(@Qualifier("testaSqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
+    @Bean(name = "tradeSqlSessionTemplate")
+    public SqlSessionTemplate testbSqlSessionTemplate(@Qualifier("tradeSqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
         SqlSessionTemplate template = new SqlSessionTemplate(sqlSessionFactory); // 使用上面配置的Factory
         return template;
     }
