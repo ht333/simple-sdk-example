@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import({UtilConfig.class})
-public class Main {
+public class SdkCore {
 
 
 }

@@ -11,10 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 6/15/18
  */
 @SpringBootApplication
-public class Main {
+public class SdkServer {
 
     public static void main(String[] args) {
-        SpringApplication.run(Main.class , args);
+        SpringApplication.run(SdkServer.class , args);
     }
 
 }
