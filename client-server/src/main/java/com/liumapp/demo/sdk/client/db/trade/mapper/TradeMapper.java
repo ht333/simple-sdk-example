@@ -5,7 +5,6 @@ import com.liumapp.demo.sdk.client.db.trade.domain.TradeExample;
 
 import java.util.List;
 
-import com.liumapp.demo.sdk.client.db.trade.domain.Trade;
 import org.apache.ibatis.annotations.Param;
 
 public interface TradeMapper {

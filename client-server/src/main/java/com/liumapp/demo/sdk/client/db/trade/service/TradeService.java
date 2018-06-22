@@ -2,8 +2,6 @@ package com.liumapp.demo.sdk.client.db.trade.service;
 
 import com.liumapp.demo.sdk.client.entity.TradeDetail;
 import com.liumapp.demo.sdk.client.db.trade.domain.Trade;
-import com.liumapp.demo.sdk.client.db.trade.domain.Trade;
-import com.liumapp.demo.sdk.client.entity.TradeDetail;
 
 /**
  * @author liumapp

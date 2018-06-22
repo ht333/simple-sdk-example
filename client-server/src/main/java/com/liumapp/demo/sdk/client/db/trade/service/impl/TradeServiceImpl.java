@@ -8,7 +8,6 @@ import com.liumapp.demo.sdk.client.db.trade.mapper.TradeMapper;
 import com.liumapp.demo.sdk.client.db.user.service.ShippingAddressService;
 import com.liumapp.demo.sdk.client.db.user.service.UserService;
 import com.liumapp.demo.sdk.client.db.trade.service.TradeService;
-import com.liumapp.demo.sdk.client.entity.TradeDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
