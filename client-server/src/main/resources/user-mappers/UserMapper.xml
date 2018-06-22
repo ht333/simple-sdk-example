@@ -101,7 +101,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.liumapp.demo.sdk.client.db.user.domain.User">
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.liumapp.demo.sdk.client.db.user.domain.User">
     insert into user (id, name, age, 
       sex, creatAt, updateAt
       )

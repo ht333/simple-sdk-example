@@ -100,7 +100,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.liumapp.demo.sdk.client.db.user.domain.ShippingAddress">
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.liumapp.demo.sdk.client.db.user.domain.ShippingAddress">
     insert into shipping_address (id, userId, province, 
       city, area)
     values (#{id,jdbcType=BIGINT}, #{userid,jdbcType=BIGINT}, #{province,jdbcType=VARCHAR}, 

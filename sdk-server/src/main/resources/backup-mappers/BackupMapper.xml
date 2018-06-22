@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.liumapp.demo.sdk.client.db.trade.mapper.TradeMapper">
-  <resultMap id="BaseResultMap" type="com.liumapp.demo.sdk.client.db.trade.domain.Trade">
+<mapper namespace="com.liumapp.demo.sdk.client.db.backup.mapper.BackupMapper">
+  <resultMap id="BaseResultMap" type="com.liumapp.demo.sdk.client.db.backup.domain.Backup">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="userId" jdbcType="BIGINT" property="userid" />
-    <result column="product" jdbcType="VARCHAR" property="product" />
-    <result column="number" jdbcType="INTEGER" property="number" />
-    <result column="price" jdbcType="DECIMAL" property="price" />
     <result column="creatAt" jdbcType="TIMESTAMP" property="creatat" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.liumapp.demo.sdk.client.db.backup.domain.Backup">
+    <result column="data" jdbcType="LONGVARCHAR" property="data" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -68,16 +67,21 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, userId, product, number, price, creatAt
+    id, creatAt
   </sql>
-  <select id="selectByExample" parameterType="com.liumapp.demo.sdk.client.db.trade.domain.TradeExample" resultMap="BaseResultMap">
+  <sql id="Blob_Column_List">
+    data
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.liumapp.demo.sdk.client.db.backup.domain.BackupExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
     </if>
     'true' as QUERYID,
     <include refid="Base_Column_List" />
-    from trade
+    ,
+    <include refid="Blob_Column_List" />
+    from backup
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -85,145 +89,131 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.liumapp.demo.sdk.client.db.backup.domain.BackupExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from backup
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
     select 
     <include refid="Base_Column_List" />
-    from trade
+    ,
+    <include refid="Blob_Column_List" />
+    from backup
     where id = #{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from trade
+    delete from backup
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.liumapp.demo.sdk.client.db.trade.domain.TradeExample">
-    delete from trade
+  <delete id="deleteByExample" parameterType="com.liumapp.demo.sdk.client.db.backup.domain.BackupExample">
+    delete from backup
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.liumapp.demo.sdk.client.db.trade.domain.Trade">
-    insert into trade (id, userId, product, 
-      number, price, creatAt
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.liumapp.demo.sdk.client.db.backup.domain.Backup">
+    insert into backup (id, creatAt, data
       )
-    values (#{id,jdbcType=BIGINT}, #{userid,jdbcType=BIGINT}, #{product,jdbcType=VARCHAR}, 
-      #{number,jdbcType=INTEGER}, #{price,jdbcType=DECIMAL}, #{creatat,jdbcType=TIMESTAMP}
+    values (#{id,jdbcType=BIGINT}, #{creatat,jdbcType=TIMESTAMP}, #{data,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.liumapp.demo.sdk.client.db.trade.domain.Trade">
-    insert into trade
+  <insert id="insertSelective" parameterType="com.liumapp.demo.sdk.client.db.backup.domain.Backup">
+    insert into backup
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
       </if>
-      <if test="userid != null">
-        userId,
-      </if>
-      <if test="product != null">
-        product,
-      </if>
-      <if test="number != null">
-        number,
-      </if>
-      <if test="price != null">
-        price,
-      </if>
       <if test="creatat != null">
         creatAt,
+      </if>
+      <if test="data != null">
+        data,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="userid != null">
-        #{userid,jdbcType=BIGINT},
-      </if>
-      <if test="product != null">
-        #{product,jdbcType=VARCHAR},
-      </if>
-      <if test="number != null">
-        #{number,jdbcType=INTEGER},
-      </if>
-      <if test="price != null">
-        #{price,jdbcType=DECIMAL},
-      </if>
       <if test="creatat != null">
         #{creatat,jdbcType=TIMESTAMP},
       </if>
+      <if test="data != null">
+        #{data,jdbcType=LONGVARCHAR},
+      </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.liumapp.demo.sdk.client.db.trade.domain.TradeExample" resultType="java.lang.Long">
-    select count(*) from trade
+  <select id="countByExample" parameterType="com.liumapp.demo.sdk.client.db.backup.domain.BackupExample" resultType="java.lang.Long">
+    select count(*) from backup
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update trade
+    update backup
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.userid != null">
-        userId = #{record.userid,jdbcType=BIGINT},
-      </if>
-      <if test="record.product != null">
-        product = #{record.product,jdbcType=VARCHAR},
-      </if>
-      <if test="record.number != null">
-        number = #{record.number,jdbcType=INTEGER},
-      </if>
-      <if test="record.price != null">
-        price = #{record.price,jdbcType=DECIMAL},
-      </if>
       <if test="record.creatat != null">
         creatAt = #{record.creatat,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.data != null">
+        data = #{record.data,jdbcType=LONGVARCHAR},
+      </if>
     </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update backup
+    set id = #{record.id,jdbcType=BIGINT},
+      creatAt = #{record.creatat,jdbcType=TIMESTAMP},
+      data = #{record.data,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update trade
+    update backup
     set id = #{record.id,jdbcType=BIGINT},
-      userId = #{record.userid,jdbcType=BIGINT},
-      product = #{record.product,jdbcType=VARCHAR},
-      number = #{record.number,jdbcType=INTEGER},
-      price = #{record.price,jdbcType=DECIMAL},
       creatAt = #{record.creatat,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.liumapp.demo.sdk.client.db.trade.domain.Trade">
-    update trade
+  <update id="updateByPrimaryKeySelective" parameterType="com.liumapp.demo.sdk.client.db.backup.domain.Backup">
+    update backup
     <set>
-      <if test="userid != null">
-        userId = #{userid,jdbcType=BIGINT},
-      </if>
-      <if test="product != null">
-        product = #{product,jdbcType=VARCHAR},
-      </if>
-      <if test="number != null">
-        number = #{number,jdbcType=INTEGER},
-      </if>
-      <if test="price != null">
-        price = #{price,jdbcType=DECIMAL},
-      </if>
       <if test="creatat != null">
         creatAt = #{creatat,jdbcType=TIMESTAMP},
+      </if>
+      <if test="data != null">
+        data = #{data,jdbcType=LONGVARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.liumapp.demo.sdk.client.db.trade.domain.Trade">
-    update trade
-    set userId = #{userid,jdbcType=BIGINT},
-      product = #{product,jdbcType=VARCHAR},
-      number = #{number,jdbcType=INTEGER},
-      price = #{price,jdbcType=DECIMAL},
-      creatAt = #{creatat,jdbcType=TIMESTAMP}
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.liumapp.demo.sdk.client.db.backup.domain.Backup">
+    update backup
+    set creatAt = #{creatat,jdbcType=TIMESTAMP},
+      data = #{data,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.liumapp.demo.sdk.client.db.backup.domain.Backup">
+    update backup
+    set creatAt = #{creatat,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>
