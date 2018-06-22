@@ -24,16 +24,11 @@ public class DruidDatasourceConfig {
      * 该注解表示在同一个接口有多个实现类可以注入的时候，默认选择哪一个，而不是让autowire注解报错，官网要求当多个数据源时，必须指定一个datasource，另一个datasource则不用添加。
      */
     @Primary
-    @Bean(name = "primaryDataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.druid.primary")
+    @Bean(name = "backupDataSource")
+    @ConfigurationProperties(prefix = "spring.datasource.druid.backup")
     public DataSource primaryDataSource () {
         return DruidDataSourceBuilder.create().build();
     }
 
-    @Bean(name = "secondDataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.druid.second")
-    public DataSource secondDataSource () {
-        return DruidDataSourceBuilder.create().build();
-    }
 
 }
