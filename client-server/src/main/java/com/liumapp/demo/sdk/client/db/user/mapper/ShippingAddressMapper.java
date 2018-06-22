@@ -1,8 +1,7 @@
 package com.liumapp.demo.sdk.client.db.user.mapper;
 
-import com.liumapp.demo.sdk.client.db.user.domain.ShippingAddressExample;
 import com.liumapp.demo.sdk.client.db.user.domain.ShippingAddress;
-
+import com.liumapp.demo.sdk.client.db.user.domain.ShippingAddressExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

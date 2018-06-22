@@ -1,11 +1,8 @@
 package com.liumapp.demo.sdk.client.db.user.mapper;
 
-import com.liumapp.demo.sdk.client.db.user.domain.UserExample;
 import com.liumapp.demo.sdk.client.db.user.domain.User;
-
-import java.util.List;
-
 import com.liumapp.demo.sdk.client.db.user.domain.UserExample;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
