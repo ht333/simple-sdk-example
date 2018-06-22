@@ -23,7 +23,7 @@
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mappers1"
+        <sqlMapGenerator targetPackage="backup-mappers"
                          targetProject="src/main/resources" >
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
