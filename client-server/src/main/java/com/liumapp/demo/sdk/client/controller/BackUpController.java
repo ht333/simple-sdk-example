@@ -3,6 +3,10 @@ package com.liumapp.demo.sdk.client.controller;
 import com.alibaba.fastjson.JSON;
 import com.liumapp.demo.sdk.client.entity.TradeDetail;
 import com.liumapp.demo.sdk.core.SdKCore;
+import com.liumapp.demo.sdk.core.backup.AddBackUpItem;
+import com.liumapp.demo.sdk.core.backup.GetBackUpItem;
+import com.liumapp.demo.sdk.core.backup.data.AddBackUpItemRequire;
+import com.liumapp.demo.sdk.core.backup.data.GetBackUpItemRequire;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,23 +25,17 @@ public class BackUpController {
     @RequestMapping("/add")
     public String addItem (@RequestBody TradeDetail tradeDetail) {
         SdKCore sdKCore = new SdKCore();
-        
-        return JSON.toJSONString("success");
-    }
-
-    @RequestMapping("/sdkAdd")
-    public String addItemBySdk () {
-        return JSON.toJSONString("success");
+        AddBackUpItem addBackUpItem = new AddBackUpItem();
+        AddBackUpItemRequire addBackUpItemRequire = new AddBackUpItemRequire();
+        return sdKCore.doJob(addBackUpItem, addBackUpItemRequire);
     }
 
     @RequestMapping("/get")
     public String getItem () {
-        return JSON.toJSONString("success");
-    }
-
-    @RequestMapping("/sdkGet")
-    public String getItemBySdk () {
-        return JSON.toJSONString("success");
+        SdKCore sdKCore = new SdKCore();
+        GetBackUpItem getBackUpItem = new GetBackUpItem();
+        GetBackUpItemRequire getBackUpItemRequire = new GetBackUpItemRequire();
+        return sdKCore.doJob(getBackUpItem, getBackUpItemRequire);
     }
 
 }
