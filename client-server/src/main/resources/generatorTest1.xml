@@ -14,7 +14,7 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
 
-        <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/test1"
+        <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/user"
                         driverClass="com.mysql.jdbc.Driver" password="adminadmin" userId="root" />
 
         <javaModelGenerator targetPackage="com.liumapp.demo.mybatis.complex.api.db.testa.domain"
