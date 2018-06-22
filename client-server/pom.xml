@@ -53,6 +53,11 @@
       <artifactId>druid-spring-boot-starter</artifactId>
       <version>1.1.10</version>
     </dependency>
+    <dependency>
+      <groupId>com.liumapp.demo.sdk.core</groupId>
+      <artifactId>sdk-core</artifactId>
+      <version>v1.0.0</version>
+    </dependency>
   </dependencies>
 
   <build>
