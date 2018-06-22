@@ -1,8 +1,8 @@
 package com.liumapp.demo.sdk.client.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.liumapp.demo.sdk.client.db.testa.domain.User;
-import com.liumapp.demo.sdk.client.db.testa.service.UserService;
+import com.liumapp.demo.sdk.client.db.user.domain.User;
+import com.liumapp.demo.sdk.client.db.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

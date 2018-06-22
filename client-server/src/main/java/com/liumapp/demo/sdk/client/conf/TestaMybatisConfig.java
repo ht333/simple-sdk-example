@@ -21,7 +21,7 @@ import javax.sql.DataSource;
  * @date 6/19/18
  */
 @Configuration
-@MapperScan(basePackages = {"com.liumapp.demo.sdk.client.db.testa.mapper"}, sqlSessionTemplateRef = "testaSqlSessionTemplate")
+@MapperScan(basePackages = {"com.liumapp.demo.sdk.client.db.user.mapper"}, sqlSessionTemplateRef = "testaSqlSessionTemplate")
 public class TestaMybatisConfig {
 
     @Primary

@@ -20,7 +20,7 @@ import javax.sql.DataSource;
  * @date 6/19/18
  */
 @Configuration
-@MapperScan(basePackages = {"com.liumapp.demo.sdk.client.db.testb.mapper"}, sqlSessionTemplateRef = "testbSqlSessionTemplate")
+@MapperScan(basePackages = {"com.liumapp.demo.sdk.client.db.trade.mapper"}, sqlSessionTemplateRef = "testbSqlSessionTemplate")
 public class TestbMybatisConfig {
 
     @Bean(name = "testbSqlSessionFactory")
