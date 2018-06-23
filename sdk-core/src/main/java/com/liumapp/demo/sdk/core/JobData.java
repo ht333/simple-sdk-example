@@ -8,4 +8,7 @@ package com.liumapp.demo.sdk.core;
  * @date 6/22/18
  */
 public abstract class JobData {
+
+
+
 }

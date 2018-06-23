@@ -7,8 +7,8 @@ package com.liumapp.demo.sdk.core;
  * @homepage http://www.liumapp.com
  * @date 6/22/18
  */
-public abstract class JobDetail {
+public abstract class JobDetail<T extends JobData> {
 
-    public abstract String handle (JobData data);
+    public abstract String handle ( T data);
 
 }
