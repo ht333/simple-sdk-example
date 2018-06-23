@@ -9,8 +9,8 @@ import com.liumapp.demo.sdk.core.JobData;
  * @homepage http://www.liumapp.com
  * @date 6/22/18
  */
-public class GetBackUpItemRequire extends JobData {
+public interface GetBackUpItemRequire {
 
-    
+
 
 }

@@ -2,6 +2,7 @@ package com.liumapp.demo.sdk.core.backup;
 
 import com.liumapp.demo.sdk.core.JobData;
 import com.liumapp.demo.sdk.core.JobDetail;
+import com.liumapp.demo.sdk.core.backup.data.AddBackUpItemRequire;
 
 /**
  * @author liumapp
@@ -12,7 +13,7 @@ import com.liumapp.demo.sdk.core.JobDetail;
  */
 public class AddBackUpItem extends JobDetail {
 
-    public String handle(JobData data) {
+    public String handle(AddBackUpItemRequire data) {
         return null;
     }
 

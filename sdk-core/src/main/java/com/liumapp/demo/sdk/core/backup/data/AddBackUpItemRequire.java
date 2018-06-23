@@ -1,6 +1,5 @@
 package com.liumapp.demo.sdk.core.backup.data;
 
-import com.liumapp.demo.sdk.core.JobData;
 
 /**
  * @author liumapp
@@ -9,8 +8,6 @@ import com.liumapp.demo.sdk.core.JobData;
  * @homepage http://www.liumapp.com
  * @date 6/22/18
  */
-public class AddBackUpItemRequire extends JobData {
-
-                
+public interface AddBackUpItemRequire {
 
 }
