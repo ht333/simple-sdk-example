@@ -21,6 +21,7 @@
         <add-address v-if="current == 1" @next="nextStep" @prev="prevStep" :userId="userId"></add-address>
         <add-order v-if="current == 2" @next="nextStep" @prev="prevStep" :userId="userId" @getOrderId="getOrderId"></add-order>
         <result-list v-if="current == 3" @prev="prevStep" :userId="userId" :orderId="orderId"></result-list>
+        <backup-info v-if="current == 4" :userId="userId" :orderId="orderId"></backup-info>
       </Card>
       </Col>
     </Row>
@@ -32,10 +33,11 @@ import AddOrder from '@/components/add-order'
 import AddUser from '@/components/add-user'
 import ResultList from '@/components/result-list'
 import Util from '@/libs/util'
+import BackupInfo from '@/components/backup-info'
 export default {
   name: 'index',
   components: {
-    AddAddress, AddOrder, AddUser, ResultList
+    AddAddress, AddOrder, AddUser, ResultList, BackupInfo
   },
   data () {
     return {
