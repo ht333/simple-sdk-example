@@ -15,6 +15,7 @@
           <Step title="提交地址" content="用户提交收货地址"></Step>
           <Step title="提交订单" content="用户提交订单信息"></Step>
           <Step title="订单结果" content="展示订单结果"></Step>
+          <Step title="SDK备份信息" content="从sdk-server中获取备份数据"></Step>
         </Steps>
         <add-user v-if="current == 0" @next="nextStep" @getUserId="getUserId"></add-user>
         <add-address v-if="current == 1" @next="nextStep" @prev="prevStep" :userId="userId"></add-address>
