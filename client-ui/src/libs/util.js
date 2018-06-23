@@ -58,7 +58,7 @@ util.checkStatus = function checkStatus (response) {
   // console.log(response)
   if (response && (response.status === 200 || response.status === 304 || response.status === 400)) {
     return response;
-    // 如果不需要除了data之外的数据，可以直接 return response.data
+    // 如果不需要除了data之外的数据，可以直接 return response.require
   }
   Message.warning('网络异常');
   // 异常状态下，把错误信息返回去

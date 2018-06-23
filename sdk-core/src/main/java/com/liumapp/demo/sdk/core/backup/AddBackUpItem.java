@@ -1,8 +1,7 @@
 package com.liumapp.demo.sdk.core.backup;
 
-import com.liumapp.demo.sdk.core.JobData;
 import com.liumapp.demo.sdk.core.JobDetail;
-import com.liumapp.demo.sdk.core.backup.data.AddBackUpItemRequire;
+import com.liumapp.demo.sdk.core.require.backup.AddBackUpItemRequire;
 
 /**
  * @author liumapp
