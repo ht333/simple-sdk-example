@@ -1,5 +1,6 @@
 package com.liumapp.demo.sdk.client.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.liumapp.demo.sdk.client.entity.TradeDetail;
 import com.liumapp.demo.sdk.core.SdKCore;
 import com.liumapp.demo.sdk.core.backup.AddBackUpItem;
@@ -26,6 +27,9 @@ public class BackUpController {
         SdKCore sdKCore = new SdKCore();
         AddBackUpItem addBackUpItem = new AddBackUpItem();
         AddBackUpItemRequire addBackUpItemRequire = new AddBackUpItemRequire();
+        addBackUpItemRequire.setAppKey("this is app key");
+        addBackUpItemRequire.setAppSecret("this is app secret");
+        addBackUpItemRequire.setBackupData(JSON.toJSONString(tradeDetail));
         return sdKCore.doJob(addBackUpItem, addBackUpItemRequire);
     }
 

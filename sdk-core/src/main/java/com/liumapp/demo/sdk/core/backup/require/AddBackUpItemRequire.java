@@ -11,6 +11,13 @@ import com.liumapp.demo.sdk.core.JobData;
  */
 public class AddBackUpItemRequire extends JobData {
 
+    private String backupData;
 
+    public String getBackupData() {
+        return backupData;
+    }
 
+    public void setBackupData(String backupData) {
+        this.backupData = backupData;
+    }
 }
