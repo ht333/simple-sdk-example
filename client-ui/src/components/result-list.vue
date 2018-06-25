@@ -26,7 +26,7 @@
   <Row>
     <Col span="8">SDK备份</Col>
     <Col span="16">
-      <Button>备份</Button>
+      <Button type="primary" @click="handleBackUp">备份</Button>
     </Col>
   </Row>
 </div>
@@ -62,7 +62,11 @@ export default {
     });
   },
   methods: {
+    handleBackUp () {
+      Util.post('backup/add', this.detail).then(res => {
 
+      });
+    }
   }
 }
 </script>
