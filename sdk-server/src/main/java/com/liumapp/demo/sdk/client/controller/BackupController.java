@@ -3,10 +3,13 @@ package com.liumapp.demo.sdk.client.controller;
 import com.alibaba.fastjson.JSON;
 import com.liumapp.demo.sdk.client.db.backup.domain.Backup;
 import com.liumapp.demo.sdk.client.db.backup.service.BackUpService;
+import com.liumapp.demo.sdk.client.entity.open.BackUpTradeDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
 
 /**
  * @author liumapp
@@ -23,7 +26,10 @@ public class BackupController {
     private BackUpService backUpService;
 
     @RequestMapping("/add")
-    public String addItem (@RequestBody Backup backup) {
+    public String addItem (@RequestBody BackUpTradeDetail backUpTradeDetail) {
+        Backup backup = new Backup();
+        backup.setData(JSON.toJSONString(backUpTradeDetail));
+        backup.setCreatat(new Date());
         backUpService.insert(backup);
         return JSON.toJSONString(backup.getId());
     }
