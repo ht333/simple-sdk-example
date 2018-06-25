@@ -6,4 +6,6 @@ public class HostConfig {
 
     public static String addBackUpItemPath = "backup/add";
 
+    public static String getBackUpItemPath = "backup/get";
+
 }
