@@ -19,6 +19,7 @@ public abstract class AuthJobDetail<T extends JobData> extends JobDetail<T> impl
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("appKey", data.getAppKey());
         headers.put("appSecret", data.getAppSecret());
+        headers.put("Content-Type", "application/json");
         return headers;
     }
 }

@@ -26,6 +26,7 @@ public class BackupController {
 
     @RequestMapping("/add")
     public String addItem (@RequestBody Backup backup) {
+        backup.setCreatat(new Date());
         backUpService.insert(backup);
         return JSON.toJSONString(backup.getId());
     }

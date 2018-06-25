@@ -1,5 +1,6 @@
 package com.liumapp.demo.sdk.core.backup;
 
+import com.alibaba.fastjson.JSONObject;
 import com.liumapp.demo.sdk.core.JobData;
 import com.liumapp.demo.sdk.core.JobDetail;
 import com.liumapp.demo.sdk.core.file.FileSaveAble;
@@ -13,8 +14,7 @@ import com.liumapp.demo.sdk.core.file.FileSaveAble;
  */
 public class AddFileBackUpItem extends JobDetail implements FileSaveAble {
 
-    public String handle(JobData data) {
+    public JSONObject handle(JobData data) {
         return null;
     }
-
 }

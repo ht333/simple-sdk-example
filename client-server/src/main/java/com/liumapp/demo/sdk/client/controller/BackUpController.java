@@ -30,7 +30,7 @@ public class BackUpController {
         addBackUpItemRequire.setAppKey("this is app key");
         addBackUpItemRequire.setAppSecret("this is app secret");
         addBackUpItemRequire.setBackupData(JSON.toJSONString(tradeDetail));
-        return sdKCore.doJob(addBackUpItem, addBackUpItemRequire);
+        return sdKCore.doJob(addBackUpItem, addBackUpItemRequire).toJSONString();
     }
 
     @RequestMapping("/get")
@@ -38,7 +38,7 @@ public class BackUpController {
         SdKCore sdKCore = new SdKCore();
         GetBackUpItem getBackUpItem = new GetBackUpItem();
         GetBackUpItemRequire getBackUpItemRequire = new GetBackUpItemRequire();
-        return sdKCore.doJob(getBackUpItem, getBackUpItemRequire);
+        return sdKCore.doJob(getBackUpItem, getBackUpItemRequire).toJSONString();
     }
 
 }
