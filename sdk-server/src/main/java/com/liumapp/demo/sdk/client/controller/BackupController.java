@@ -3,7 +3,6 @@ package com.liumapp.demo.sdk.client.controller;
 import com.alibaba.fastjson.JSON;
 import com.liumapp.demo.sdk.client.db.backup.domain.Backup;
 import com.liumapp.demo.sdk.client.db.backup.service.BackUpService;
-import com.liumapp.demo.sdk.client.entity.open.BackUpTradeDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
