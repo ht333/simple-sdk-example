@@ -1,9 +1,13 @@
 package com.liumapp.demo.sdk.core.backup;
 
 import com.liumapp.demo.sdk.core.JobDetail;
+import com.liumapp.demo.sdk.core.auth.AuthJobDetail;
+import com.liumapp.demo.sdk.core.auth.AuthStrategy;
 import com.liumapp.demo.sdk.core.backup.require.AddBackUpItemRequire;
 import com.liumapp.demo.sdk.core.conf.HostConfig;
 import com.liumapp.demo.sdk.core.http.HttpUtil;
+
+import java.util.Map;
 
 /**
  * @author liumapp
@@ -12,7 +16,7 @@ import com.liumapp.demo.sdk.core.http.HttpUtil;
  * @homepage http://www.liumapp.com
  * @date 6/22/18
  */
-public class AddBackUpItem extends JobDetail<AddBackUpItemRequire> {
+public class AddBackUpItem extends AuthJobDetail<AddBackUpItemRequire> {
 
     private HttpUtil httpUtil;
 
@@ -21,7 +25,7 @@ public class AddBackUpItem extends JobDetail<AddBackUpItemRequire> {
     }
 
     public String handle(AddBackUpItemRequire data) {
-        httpUtil.doPost(HostConfig.host, HostConfig.addBackUpItemPath, "POST", );
+        httpUtil.doPost(HostConfig.host, HostConfig.addBackUpItemPath, "POST",);
         return null;
     }
 

@@ -1,5 +1,7 @@
 package com.liumapp.demo.sdk.core.auth;
 
+import java.util.Map;
+
 /**
  * @author liumapp
  * @file AuthStrategy.java
@@ -9,6 +11,6 @@ package com.liumapp.demo.sdk.core.auth;
  */
 public interface AuthStrategy  {
 
-
+    public Map<String, String> getAuthenticationHeaders ();
 
 }
