@@ -35,7 +35,7 @@ public class BackUpController {
     }
 
     @RequestMapping("/get")
-    public String getItem (@RequestParam Integer id) {
+    public String getItem (@RequestBody TradeDetail tradeDetail) {
         SdKCore sdKCore = new SdKCore();
         GetBackUpItem getBackUpItem = new GetBackUpItem();
         GetBackUpItemRequire getBackUpItemRequire = new GetBackUpItemRequire();

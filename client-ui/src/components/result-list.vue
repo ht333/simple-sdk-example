@@ -72,7 +72,9 @@ export default {
     },
     showBackUp () {
       Util.post('backup/get', {
-        
+        id: this.backupId
+      }).then(res => {
+        console.log(res.data);
       })
     }
   }
