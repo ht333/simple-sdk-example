@@ -2,6 +2,12 @@ server:
   port: 2020
 
 spring:
+  thymeleaf:
+      suffix: .html
+      mode: LEGACYHTML5
+      encoding: UTF-8
+      content-type: text/html; charset=utf-8
+      cache: false
   datasource:
     druid:
       filter:
@@ -15,7 +21,6 @@ spring:
         password: adminadmin
         driver-class-name: com.mysql.jdbc.Driver
         initial-size: 10
-        max-idle: 100
         max-active: 100
         max-wait: 10000
         min-idle: 10
@@ -29,7 +34,6 @@ spring:
         username: root
         password: adminadmin
         driver-class-name: com.mysql.jdbc.Driver
-        max-idle: 100
         max-active: 100
         max-wait: 10000
         min-idle: 10
