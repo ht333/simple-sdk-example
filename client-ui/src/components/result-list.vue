@@ -23,6 +23,12 @@
     <Col span="8">收货地址</Col>
     <Col span="16">{{ detail.province }} / {{ detail.city }} / {{ detail.area }}</Col>
   </Row>
+  <Row>
+    <Col span="8">SDK备份</Col>
+    <Col span="16">
+      <Button>备份</Button>
+    </Col>
+  </Row>
 </div>
 </template>
 <script>
