@@ -9,6 +9,7 @@ import com.liumapp.demo.sdk.core.backup.require.AddBackUpItemRequire;
 import com.liumapp.demo.sdk.core.backup.require.GetBackUpItemRequire;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -34,7 +35,7 @@ public class BackUpController {
     }
 
     @RequestMapping("/get")
-    public String getItem () {
+    public String getItem (@RequestParam Integer id) {
         SdKCore sdKCore = new SdKCore();
         GetBackUpItem getBackUpItem = new GetBackUpItem();
         GetBackUpItemRequire getBackUpItemRequire = new GetBackUpItemRequire();

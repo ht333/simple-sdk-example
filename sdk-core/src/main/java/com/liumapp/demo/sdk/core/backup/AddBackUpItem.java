@@ -24,19 +24,13 @@ import java.util.Map;
  */
 public class AddBackUpItem extends AuthJobDetail<AddBackUpItemRequire> {
 
-    private HttpUtil httpUtil;
-
-    public AddBackUpItem() {
-        this.httpUtil = new HttpUtil();
-    }
-
     public JSONObject handle(AddBackUpItemRequire data) {
         Map<String, String> querys = new HashMap<String, String>();
         JSONObject object = new JSONObject();
         object.put("data", data.getBackupData());
         String bodys = object.toJSONString();
         try {
-            HttpResponse response = httpUtil.doPost(HostConfig.host,
+            HttpResponse response = this.httpUtil.doPost(HostConfig.host,
                     HostConfig.addBackUpItemPath,
                     "POST",
                     getAuthenticationHeaders(data),

@@ -67,11 +67,13 @@ export default {
     handleBackUp () {
       Util.post('backup/add', this.detail).then(res => {
         this.$Message.success("back up success");
-        this.backupId = res.data;
+        this.backupId = res.data.id;
       });
     },
     showBackUp () {
-
+      Util.post('backup/get', {
+        
+      })
     }
   }
 }

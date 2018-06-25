@@ -10,4 +10,14 @@ import com.liumapp.demo.sdk.core.JobData;
  * @date 6/23/18
  */
 public class GetBackUpItemRequire extends JobData {
+
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }
