@@ -64,7 +64,7 @@ export default {
   methods: {
     handleBackUp () {
       Util.post('backup/add', this.detail).then(res => {
-
+        this.$emit('next');
       });
     }
   }

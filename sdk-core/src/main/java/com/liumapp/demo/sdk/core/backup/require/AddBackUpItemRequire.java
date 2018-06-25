@@ -10,4 +10,7 @@ import com.liumapp.demo.sdk.core.JobData;
  * @date 6/23/18
  */
 public class AddBackUpItemRequire extends JobData {
+
+
+
 }

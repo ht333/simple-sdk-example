@@ -20,7 +20,7 @@
         <add-user v-if="current == 0" @next="nextStep" @getUserId="getUserId"></add-user>
         <add-address v-if="current == 1" @next="nextStep" @prev="prevStep" :userId="userId"></add-address>
         <add-order v-if="current == 2" @next="nextStep" @prev="prevStep" :userId="userId" @getOrderId="getOrderId"></add-order>
-        <result-list v-if="current == 3" @prev="prevStep" :userId="userId" :orderId="orderId"></result-list>
+        <result-list v-if="current == 3" @prev="prevStep" @next="nextStep" :userId="userId" :orderId="orderId"></result-list>
         <backup-info v-if="current == 4" :userId="userId" :orderId="orderId"></backup-info>
       </Card>
       </Col>
