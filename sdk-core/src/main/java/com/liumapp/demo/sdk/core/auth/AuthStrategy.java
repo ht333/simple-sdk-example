@@ -1,5 +1,7 @@
 package com.liumapp.demo.sdk.core.auth;
 
+import com.liumapp.demo.sdk.core.JobData;
+
 import java.util.Map;
 
 /**
@@ -9,8 +11,8 @@ import java.util.Map;
  * @homepage http://www.liumapp.com
  * @date 6/25/18
  */
-public interface AuthStrategy  {
+public interface AuthStrategy<T extends JobData>  {
 
-    public Map<String, String> getAuthenticationHeaders ();
+    public Map<String, String> getAuthenticationHeaders (T data);
 
 }

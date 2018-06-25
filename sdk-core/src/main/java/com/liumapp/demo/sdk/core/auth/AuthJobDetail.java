@@ -15,11 +15,10 @@ import java.util.Map;
  */
 public abstract class AuthJobDetail<T extends JobData> extends JobDetail<T> implements AuthStrategy {
 
-    public Map<String, String> getAuthenticationHeaders(T data) {
+    public Map<String, String> getAuthenticationHeaders(JobData data) {
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("appKey", data.getAppKey());
         headers.put("appSecret", data.getAppSecret());
         return headers;
     }
-
 }

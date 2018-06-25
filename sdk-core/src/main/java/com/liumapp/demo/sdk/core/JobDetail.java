@@ -1,5 +1,7 @@
 package com.liumapp.demo.sdk.core;
 
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * @author liumapp
  * @file JobDetail.java
@@ -9,6 +11,6 @@ package com.liumapp.demo.sdk.core;
  */
 public abstract class JobDetail<T extends JobData> {
 
-    public abstract String handle ( T data);
+    public abstract JSONObject handle (T data);
 
 }
