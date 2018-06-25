@@ -2,6 +2,7 @@ package com.liumapp.demo.sdk.core.backup;
 
 import com.liumapp.demo.sdk.core.JobDetail;
 import com.liumapp.demo.sdk.core.backup.require.AddBackUpItemRequire;
+import com.liumapp.demo.sdk.core.conf.HostConfig;
 import com.liumapp.demo.sdk.core.http.HttpUtil;
 
 /**
@@ -20,7 +21,7 @@ public class AddBackUpItem extends JobDetail<AddBackUpItemRequire> {
     }
 
     public String handle(AddBackUpItemRequire data) {
-
+        httpUtil.doPost(HostConfig.host, HostConfig.addBackUpItemPath, "POST", );
         return null;
     }
 
