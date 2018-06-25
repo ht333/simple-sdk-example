@@ -35,4 +35,4 @@ services:
 
 networks:
   simple-sdk:
-  driver: bridge
+    driver: bridge

@@ -12,19 +12,7 @@ echo '$                                                           $'
 echo '============================================================='
 echo '.'
 
-cd sdk-core
+docker rmi liumapp/client-server:v1.0.0
 
-mvn clean install -Dmaven.skip.test=true
-
-cd ..
-
-cd client-server
-
-mvn clean package -DskipTests=true docker:build
-
-cd ..
-
-cd sdk-server
-
-mvn clean package -DskipTests=true docker:build
+docker rmi liumapp/sdk-server:v1.0.0
 
