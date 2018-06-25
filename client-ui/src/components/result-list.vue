@@ -27,6 +27,7 @@
     <Col span="8">SDK备份</Col>
     <Col span="16">
       <Button type="primary" @click="handleBackUp">备份</Button>
+      <Button type="default" @click="showBackUp">查看备份</Button>
     </Col>
   </Row>
 </div>
@@ -50,7 +51,8 @@ export default {
         province: '',
         city: '',
         area: ''
-      }
+      },
+      backupId: 0
     };
   },
   mounted () {
@@ -64,8 +66,12 @@ export default {
   methods: {
     handleBackUp () {
       Util.post('backup/add', this.detail).then(res => {
-//        this.$emit('next');
+        this.$Message.success("back up success");
+        this.backupId = res.data;
       });
+    },
+    showBackUp () {
+
     }
   }
 }
