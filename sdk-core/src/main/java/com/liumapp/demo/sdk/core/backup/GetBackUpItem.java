@@ -24,7 +24,7 @@ public class GetBackUpItem extends AuthJobDetail<GetBackUpItemRequire> {
     public JSONObject handle(GetBackUpItemRequire data) {
         Map<String, String> querys = new HashMap<String, String>();
         JSONObject object = new JSONObject();
-        object.put("data", data.getId());
+        object.put("id", data.getId());
         String bodys = object.toJSONString();
         try {
             HttpResponse response = this.httpUtil.doPost(HostConfig.host,
