@@ -13,7 +13,7 @@ import java.util.Map;
  * @homepage http://www.liumapp.com
  * @date 6/25/18
  */
-public abstract class AuthJobDetail<T extends JobData> extends JobDetail implements AuthStrategy {
+public abstract class AuthJobDetail<T extends JobData> extends JobDetail<T> implements AuthStrategy {
 
     public Map<String, String> getAuthenticationHeaders(T data) {
         Map<String, String> headers = new HashMap<String, String>();

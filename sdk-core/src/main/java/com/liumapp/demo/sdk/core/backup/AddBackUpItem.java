@@ -1,5 +1,6 @@
 package com.liumapp.demo.sdk.core.backup;
 
+import com.liumapp.demo.sdk.core.JobData;
 import com.liumapp.demo.sdk.core.JobDetail;
 import com.liumapp.demo.sdk.core.auth.AuthJobDetail;
 import com.liumapp.demo.sdk.core.auth.AuthStrategy;
