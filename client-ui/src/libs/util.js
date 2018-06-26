@@ -18,7 +18,7 @@ util.title = function (title) {
   window.document.title = title;
 };
 
-const ajaxUrl = 'http://localhost:2020/';
+const ajaxUrl = window.globalconf.SERVICE_CONTEXT_PATH;
 
 util.ajaxUrl = ajaxUrl;
 

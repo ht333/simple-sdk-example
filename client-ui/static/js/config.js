@@ -6,5 +6,6 @@
  * @date 6/26/18
  */
 
-
-
+window.globalconf={
+  SERVICE_CONTEXT_PATH:`http://localhost:2020/`//配置服务器地址
+}
