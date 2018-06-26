@@ -7,5 +7,5 @@
  */
 
 window.globalconf={
-  SERVICE_CONTEXT_PATH:`http://www.liumapp.com:2020/`//配置服务器地址
+  SERVICE_CONTEXT_PATH:`http://localhost:2020/`//配置服务器地址
 }

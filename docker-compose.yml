@@ -10,15 +10,15 @@ services:
     networks:
       - simple-sdk
 
-  mysql:
-    container_name: mysql
+  client-mysql:
+    container_name: client-mysql
     image: mysql:5.5.60
     restart: always
     volumes:
       - ./client-mysql-database/mysql/data:/var/lib/mysql
       - ./client-mysql-database/mysql/conf/mysqld.conf:/etc/mysql/mysql.conf.d/mysqld.cnf
     ports:
-      - "3306:3306"
+      - "6603:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=adminadmin
     networks:

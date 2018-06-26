@@ -12,7 +12,7 @@ spring:
           log-slow-sql: true
           slow-sql-millis: 2000
       backup:
-        url: jdbc:mysql://mysql:3306/backup?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&autoReconnect=true
+        url: jdbc:mysql://mysql:6603/backup?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&autoReconnect=true
         username: root
         password: adminadmin
         driver-class-name: com.mysql.jdbc.Driver
