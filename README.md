@@ -65,46 +65,27 @@ For example, under client-server, the connection url to MySQL is "jdbc:mysql://c
 
 The client-mysql here represents the service name of MySQL under docker-compose.yml.
 
-
 So if you want to debug the backend, it is not recommended to modify the configuration files of client-server and sdk-server directly.
-
-
 
 I personally suggest this way (assuming your operating system is Mac OS):
 
-
-
 Modify your /etc/hosts file and add the following:
 
-
-
-127.0.0.1 client-server
-
-127.0.0.1 client-mysql
-
-127.0.0.1 sdk-server
-
-
+    127.0.0.1 client-server
+    
+    127.0.0.1 client-mysql
+    
+    127.0.0.1 sdk-server
 
 Then import the project into your common IDE.
 
-
-
-The front end
-
-
+### The front end
 
 The front-end project is client-ui
 
-
-
 The main configuration file of the project is./client-ui/static/js/config.js.
 
-
-
 The front-end project can run independently in nodejs environment or client-server static resources.
-
-
 
 The former is the same as the traditional front and back separation implementation, which requires an extra package compilation operation for the client-ui, and then runs the update-ui.sh script to integrate the dist resources into the client-server project.
 
