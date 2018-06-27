@@ -57,4 +57,61 @@ It is convenient to query the interaction between sdk-server and database.
 
 ## Development and debugging
 
+### The back end
+
+Because the system is run on docker, client-server, sdk-server and MySQL communicate with each other by service name of docker-compose.
+
+For example, under client-server, the connection url to MySQL is "jdbc:mysql://client-mysql:3306".
+
+The client-mysql here represents the service name of MySQL under docker-compose.yml.
+
+
+So if you want to debug the backend, it is not recommended to modify the configuration files of client-server and sdk-server directly.
+
+
+
+I personally suggest this way (assuming your operating system is Mac OS):
+
+
+
+Modify your /etc/hosts file and add the following:
+
+
+
+127.0.0.1 client-server
+
+127.0.0.1 client-mysql
+
+127.0.0.1 sdk-server
+
+
+
+Then import the project into your common IDE.
+
+
+
+The front end
+
+
+
+The front-end project is client-ui
+
+
+
+The main configuration file of the project is./client-ui/static/js/config.js.
+
+
+
+The front-end project can run independently in nodejs environment or client-server static resources.
+
+
+
+The former is the same as the traditional front and back separation implementation, which requires an extra package compilation operation for the client-ui, and then runs the update-ui.sh script to integrate the dist resources into the client-server project.
+
 ## Matters of Attention
+
+* ensure that your system has the support of maven, docker and docker-compose.
+ 
+    If the front-end project is to run independently, it needs the support of the nodejs environment.
+
+* if you want to debug the system, please execute table.sql in your local MySQL database to create the relevant data table.
