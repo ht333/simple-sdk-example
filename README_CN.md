@@ -23,6 +23,16 @@ sdk开发案例，并使用docker进行demo的部署。
 
 ## 流程介绍
 
+执行docker-compose up -d 之后，等待10秒左右。
+
+然后打开您的浏览器，分别访问
+
+* http://localhost:2020/
+
+* http://localhost:2020/druid
+
+* http://localhost:3030/druid
+
 ## 开发调试
 
 ### 后端
