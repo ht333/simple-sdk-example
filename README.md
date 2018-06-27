@@ -25,6 +25,36 @@ Using docker to demonstrate sdk.
 
 ## Introduction of process
 
+After executing docker-compose up -d, wait for about 10 seconds.
+
+Then open your browser and visit each other
+
+* http://localhost:2020/
+
+    The demo used to simulate the client's operation depends on sdk-core. 
+    
+    The service will provide process demonstration, and the specific process is:
+
+    * create new users
+
+    * submit the user's shipping address
+
+    * subscriber orders
+
+    * get order details
+
+    * with sdk-core, the order data backup interface is invoked to sdk-server, and the order details data is backed up to the database system of sdk-server.
+
+    * with sdk-core, the backup order data is obtained from sdk-server and printed in the browser's console.
+
+* http://localhost:2020/druid
+
+It is convenient to query the interaction between client-server and database.
+
+* http://localhost:3030/druid
+
+It is convenient to query the interaction between sdk-server and database.
+
 ## Development and debugging
 
 ## Matters of Attention
