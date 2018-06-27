@@ -1,6 +1,8 @@
 # sdk开发案例
 sdk开发案例，并使用docker进行demo的部署。
 
+[中文](https://github.com/liumapp/simple-sdk-example/blob/master/README_CN.md) | [English](https://github.com/liumapp/simple-sdk-example/blob/master/README.md)
+
 ## 使用方法
 
 * 首先请确保您的操作系统包含了Maven3、docker、docker-compose。
@@ -55,7 +57,9 @@ sdk开发案例，并使用docker进行demo的部署。
 
 ## 注意事项
 
+* 需要确保您的系统具有maven、docker、docker-compose的支持，如果前端项目要独立运行的话，还需要nodejs环境的支持。
 
+* 如果要调试系统，请在您本地的mysql数据库执行table.sql来创建相关数据表。
 
 
 
