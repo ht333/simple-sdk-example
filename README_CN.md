@@ -29,9 +29,27 @@ sdk开发案例，并使用docker进行demo的部署。
 
 * http://localhost:2020/
 
+    用于模拟客户端运行的demo，依赖于sdk-core，该服务会提供流程展示，具体流程为：
+    
+    * 创建新的用户
+    
+    * 提交用户的收货地址
+    
+    * 用户下订单
+    
+    * 获取订单详情
+    
+    * 借助sdk-core，向sdk-server调用订单数据备份接口，将订单详情数据备份到sdk-server的数据库系统中。
+    
+    * 借助sdk-core，向sdk-server获取备份的订单数据，并打印在浏览器的console中。
+
 * http://localhost:2020/druid
 
+    方便查询client-server与数据库的交互。
+
 * http://localhost:3030/druid
+
+    方便查询sdk-server与数据库的交互。
 
 ## 开发调试
 
