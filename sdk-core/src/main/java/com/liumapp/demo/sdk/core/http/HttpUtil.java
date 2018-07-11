@@ -51,7 +51,7 @@ public class HttpUtil {
      * @return
      * @throws Exception
      */
-    public static HttpResponse doGet(String host, String path, String method,
+    public HttpResponse doGet(String host, String path, String method,
                                      Map<String, String> headers,
                                      Map<String, String> querys)
             throws Exception {
@@ -77,7 +77,7 @@ public class HttpUtil {
      * @return
      * @throws Exception
      */
-    public static HttpResponse doPost(String host, String path, String method,
+    public HttpResponse doPost(String host, String path, String method,
                                       Map<String, String> headers,
                                       Map<String, String> querys,
                                       Map<String, String> bodys)
@@ -115,7 +115,7 @@ public class HttpUtil {
      * @return
      * @throws Exception
      */
-    public static HttpResponse doPost(String host, String path, String method,
+    public HttpResponse doPost(String host, String path, String method,
                                       Map<String, String> headers,
                                       Map<String, String> querys,
                                       String body)
@@ -146,7 +146,7 @@ public class HttpUtil {
      * @return
      * @throws Exception
      */
-    public static HttpResponse doPost(String host, String path, String method,
+    public HttpResponse doPost(String host, String path, String method,
                                       Map<String, String> headers,
                                       Map<String, String> querys,
                                       byte[] body)
@@ -176,7 +176,7 @@ public class HttpUtil {
      * @return
      * @throws Exception
      */
-    public static HttpResponse doPut(String host, String path, String method,
+    public HttpResponse doPut(String host, String path, String method,
                                      Map<String, String> headers,
                                      Map<String, String> querys,
                                      String body)
@@ -206,7 +206,7 @@ public class HttpUtil {
      * @return
      * @throws Exception
      */
-    public static HttpResponse doPut(String host, String path, String method,
+    public HttpResponse doPut(String host, String path, String method,
                                      Map<String, String> headers,
                                      Map<String, String> querys,
                                      byte[] body)
@@ -236,7 +236,7 @@ public class HttpUtil {
      * @return
      * @throws Exception
      */
-    public static HttpResponse doDelete(String host, String path, String method,
+    public HttpResponse doDelete(String host, String path, String method,
                                         Map<String, String> headers,
                                         Map<String, String> querys)
             throws Exception {
@@ -250,7 +250,7 @@ public class HttpUtil {
         return httpClient.execute(request);
     }
 
-    private static String buildUrl(String host, String path, Map<String, String> querys) throws UnsupportedEncodingException {
+    private String buildUrl(String host, String path, Map<String, String> querys) throws UnsupportedEncodingException {
         StringBuilder sbUrl = new StringBuilder();
         sbUrl.append(host);
         if (!StringUtils.isBlank(path)) {
@@ -281,7 +281,7 @@ public class HttpUtil {
         return sbUrl.toString();
     }
 
-    private static HttpClient wrapClient(String host) {
+    private HttpClient wrapClient(String host) {
         HttpClient httpClient = new DefaultHttpClient();
         if (host.startsWith("https://")) {
             sslClient(httpClient);
@@ -290,7 +290,7 @@ public class HttpUtil {
         return httpClient;
     }
 
-    private static void sslClient(HttpClient httpClient) {
+    private void sslClient(HttpClient httpClient) {
         try {
             SSLContext ctx = SSLContext.getInstance("TLS");
             X509TrustManager tm = new X509TrustManager() {

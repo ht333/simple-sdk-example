@@ -6,7 +6,7 @@ services:
     restart: always
     image: liumapp/client-server:v1.0.0
     ports:
-      - 2020:2020
+      - 2020:2020  
     networks:
       - simple-sdk
 

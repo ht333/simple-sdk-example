@@ -96,3 +96,6 @@ The former is the same as the traditional front and back separation implementati
     If the front-end project is to run independently, it needs the support of the nodejs environment.
 
 * if you want to debug the system, please execute table.sql in your local MySQL database to create the relevant data table.
+
+
+
